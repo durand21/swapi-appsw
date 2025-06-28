@@ -7,5 +7,4 @@ final appRoutes = {
   '/login': (_) => const LoginPage(),
   '/favs': (_) => const PaginaFavoritos(),
   '/splash': (_) => const SplashPage(),
-  //'/details': (_) => const DetailsPage(),
 };

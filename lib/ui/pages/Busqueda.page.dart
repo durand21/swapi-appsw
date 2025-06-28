@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../data/models/personaje.model.dart';
-import '../../data/services/busqueda.service.dart';
+import '../../data/services/swapi.service.dart';
 import '../widgets/personaje_card.dart';
 import '../widgets/appbar.dart';
 import '../widgets/app_drawer.dart';
@@ -15,9 +15,7 @@ class BusquedaPage extends StatelessWidget {
       appBar: const SwAppBar(),
       drawer: const AppDrawer(),
       body: FutureBuilder<List<Personaje>>(
-        future: ServicioBusquedaPersonaje().buscarPersonajesPorNombre(
-          textoBusqueda,
-        ),
+        future: ServicioSwapi().buscarPersonajes(textoBusqueda),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());

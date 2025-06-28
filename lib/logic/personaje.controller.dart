@@ -39,7 +39,7 @@ class ControladorPersonajes extends ChangeNotifier {
       final nuevos = await ServicioSwapi().obtenerPersonajes(pagina: _pagina);
       _lista.addAll(nuevos);
     } catch (_) {
-      _pagina--; // rollback si falla
+      _pagina--;
     }
     _cargandoMas = false;
     notifyListeners();

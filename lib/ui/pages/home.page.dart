@@ -59,6 +59,25 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
+            TextField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(),
+              ),
+              textInputAction: TextInputAction.search,
+              onSubmitted: (texto) {
+                final textoLimpio = texto.trim();
+                if (textoLimpio.isNotEmpty) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => BusquedaPage(textoBusqueda: textoLimpio),
+                    ),
+                  );
+                }
+              },
+            ),
+            const SizedBox(height: 10),
             Expanded(
               child: ListView.builder(
                 controller: _scrollController,

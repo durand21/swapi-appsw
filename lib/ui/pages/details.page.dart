@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../../data/models/personaje.model.dart';
 import '../../data/services/swapi.service.dart';
 import '../../data/services/favs.service.dart';
-import '../widgets/personaje_card.dart';
 
 class DetalleModal extends StatefulWidget {
   final Personaje personaje;

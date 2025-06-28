@@ -21,8 +21,8 @@ class Personaje {
       url: json['url'] ?? '',
       genero: json['gender'] ?? 'desconocido',
       nacimiento: json['birth_year'] ?? 'desconocido',
-      altura: json['height'], // opcionales
-      peso: json['mass'], // opcionales
+      altura: json['height'],
+      peso: json['mass'],
     );
   }
 }
