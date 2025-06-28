@@ -33,8 +33,6 @@ class _DetalleModalState extends State<DetalleModal> {
 
   @override
   Widget build(BuildContext context) {
-    final esAncho = MediaQuery.of(context).size.width > 800;
-
     return Dialog(
       insetPadding: const EdgeInsets.all(16),
       backgroundColor: Colors.transparent,
