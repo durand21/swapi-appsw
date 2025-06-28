@@ -1,0 +1,1 @@
+export './personaje.model.dart';
