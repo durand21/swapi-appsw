@@ -40,10 +40,10 @@ class ServicioFavoritos {
       await ref.set({
         'name': personaje.nombre,
         'url': personaje.url,
-        'genero': personaje.genero,
-        'nacimiento': personaje.nacimiento,
-        'altura': personaje.altura,
-        'peso': personaje.peso,
+        'gender': personaje.genero,
+        'birth_year': personaje.nacimiento,
+        'height': personaje.altura,
+        'mass': personaje.peso,
       }); // agregar a favoritos
     }
   }

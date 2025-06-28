@@ -27,4 +27,18 @@ class ServicioSwapi {
       throw Exception('Error al obtener el personaje');
     }
   }
+
+  Future<List<Personaje>> buscarPersonajes(String texto) async {
+    final url = Uri.parse('https://swapi.info/api/people?search=$texto');
+    final respuesta = await http.get(url);
+
+    if (respuesta.statusCode == 200) {
+      final jsonData = json.decode(respuesta.body);
+      return List<Map<String, dynamic>>.from(
+        jsonData,
+      ).map((e) => Personaje.desdeJson(e)).toList();
+    } else {
+      throw Exception('Error al buscar personajes');
+    }
+  }
 }
